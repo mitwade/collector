@@ -22,7 +22,7 @@ export default function CreatureCard({ creatureId, size = 'md', onClick, disable
       disabled={disabled || !clickable}
       title={`${def.name} — ${def.points} pts, costs ${def.cost} ${def.color === 'any' ? 'coin (any color)' : def.color}`}
     >
-      <img src={`/assets/creatures/${def.image}`} alt={def.name} draggable={false} />
+      <img src={`${import.meta.env.BASE_URL}assets/creatures/${def.image}`} alt={def.name} draggable={false} />
       <div className="creature-card__footer">
         <span className="creature-card__name">{def.name}</span>
         <span className="creature-card__stats">

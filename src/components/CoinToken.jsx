@@ -14,7 +14,7 @@ export default function CoinToken({ color, size = 40, onClick, disabled, count, 
       aria-label={`${COIN_LABEL[color]} coin${count !== undefined ? `, ${count} available` : ''}`}
       title={COIN_LABEL[color]}
     >
-      <img src={`/assets/coins/${color}.png`} alt="" draggable={false} />
+      <img src={`${import.meta.env.BASE_URL}assets/coins/${color}.png`} alt="" draggable={false} />
       {count !== undefined && <span className="coin-token__count">{count}</span>}
     </button>
   );
