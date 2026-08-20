@@ -1,0 +1,163 @@
+/* ---------------------------------------------------------------------- */
+/* Collector — "Arcane Bestiary Ledger" design tokens                      */
+/* ---------------------------------------------------------------------- */
+:root {
+  /* Palette */
+  --ink-900: #14161f;
+  --ink-800: #1b1f2e;
+  --ink-700: #262b3d;
+  --ink-600: #343b53;
+  --parchment-100: #f4ecd8;
+  --parchment-200: #e8ddc1;
+  --parchment-300: #d9caa3;
+  --text-on-parchment: #2a2118;
+  --text-on-ink: #ece4cf;
+  --gold: #c9a24b;
+  --gold-bright: #e8c877;
+  --fire: #b3452c;
+  --fire-bright: #d9663f;
+  --sky: #3d6fa5;
+  --sky-bright: #5b8fc4;
+  --forest: #4c7a4c;
+  --forest-bright: #6a9e6a;
+  --danger: #9c3b3b;
+  --shadow-deep: 0 12px 30px rgba(0, 0, 0, 0.45);
+  --shadow-soft: 0 4px 14px rgba(0, 0, 0, 0.3);
+
+  /* Type */
+  --font-display: 'Cinzel', 'Georgia', serif;
+  --font-body: 'Spectral', 'Georgia', serif;
+  --font-caption: 'Spectral SC', 'Spectral', serif;
+
+  /* Layout */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at top, var(--ink-700) 0%, var(--ink-900) 70%);
+  color: var(--text-on-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+button:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--gold-bright);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink-900);
+}
+
+.eyebrow {
+  font-family: var(--font-caption);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+
+.btn {
+  border: 1px solid var(--gold);
+  background: linear-gradient(180deg, var(--ink-600), var(--ink-700));
+  color: var(--text-on-ink);
+  padding: 0.55em 1.1em;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+  background: linear-gradient(180deg, var(--ink-600), var(--ink-600));
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  border-color: var(--gold-bright);
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+  color: var(--ink-900);
+  font-weight: 600;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(180deg, #f0d488, var(--gold-bright));
+}
+
+.btn-ghost {
+  border-color: transparent;
+  background: transparent;
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.btn-danger {
+  border-color: var(--danger);
+}
+
+.parchment-panel {
+  background: var(--parchment-200);
+  color: var(--text-on-parchment);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--parchment-300);
+  box-shadow: var(--shadow-deep);
+}
+
+.coin-color-fire {
+  color: var(--fire-bright);
+}
+.coin-color-sky {
+  color: var(--sky-bright);
+}
+.coin-color-forest {
+  color: var(--forest-bright);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

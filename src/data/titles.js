@@ -1,0 +1,46 @@
+// Collector Titles — 33 total. Creature requirements use creature ids from creatures.js.
+// Sphinx -> harpy, Ogre -> dryad throughout (see creatures.js note).
+
+export const TITLES = [
+  { id: 1, name: 'Scales & Muscle', requires: ['dragon', 'dryad', 'dryad'], points: 6 },
+  { id: 2, name: 'Twin Talons', requires: ['griffin', 'griffin'], points: 8 },
+  { id: 3, name: 'Horned Mystics', requires: ['unicorn', 'unicorn'], points: 6 },
+  { id: 4, name: 'Twin Embers', requires: ['phoenix', 'phoenix'], points: 6 },
+  { id: 5, name: 'Warband', requires: ['goblin', 'goblin', 'goblin'], points: 7 },
+  { id: 6, name: 'Riddle Sages', requires: ['harpy', 'harpy', 'harpy'], points: 7 },
+  { id: 7, name: 'Cloud Cavalry', requires: ['pegasus', 'pegasus', 'pegasus'], points: 5 },
+  { id: 8, name: 'Wildfire', requires: ['fairy', 'fairy', 'fairy', 'fairy'], points: 6 },
+  { id: 9, name: 'Brutes', requires: ['dryad', 'dryad', 'dryad', 'dryad'], points: 4 },
+  { id: 10, name: 'Iron Hooves', requires: ['centaur', 'centaur', 'centaur', 'centaur'], points: 4 },
+  { id: 11, name: 'Mud & Magic', requires: ['dryad', 'unicorn', 'dryad'], points: 5 },
+  { id: 12, name: 'Stolen Chariot', requires: ['goblin', 'pegasus', 'pegasus'], points: 6 },
+  { id: 13, name: 'Desert Pact', requires: ['harpy', 'centaur', 'centaur'], points: 5 },
+  { id: 14, name: 'Bounty', requires: ['griffin', 'centaur', 'centaur'], points: 6 },
+  { id: 15, name: 'Bog & Beauty', requires: ['fairy', 'goblin', 'fairy'], points: 6 },
+  { id: 16, name: 'Heavy Flames', requires: ['dryad', 'dryad', 'fairy', 'fairy'], points: 5 },
+  { id: 17, name: 'Blaze & Bow', requires: ['fairy', 'fairy', 'centaur', 'centaur'], points: 5 },
+  { id: 18, name: 'Wisdom & Wrath', requires: ['dryad', 'harpy', 'dryad'], points: 5 },
+  { id: 19, name: 'Forest Fellowship', requires: ['unicorn', 'goblin', 'dryad'], points: 6 },
+  { id: 20, name: 'Charmers', requires: ['unicorn', 'fairy', 'fairy'], points: 6 },
+  { id: 21, name: 'Wings & Wisdom', requires: ['phoenix', 'fairy', 'harpy'], points: 7 },
+  { id: 22, name: 'Ash & Sky', requires: ['phoenix', 'pegasus', 'pegasus'], points: 6 },
+  { id: 23, name: 'Blazing Vanguard', requires: ['phoenix', 'centaur', 'centaur'], points: 5 },
+  { id: 24, name: 'Flame & Fable', requires: ['phoenix', 'goblin', 'harpy'], points: 8 },
+  { id: 25, name: 'Prank & Pyre', requires: ['goblin', 'harpy', 'fairy'], points: 6 },
+  { id: 26, name: 'Grounded Grunts', requires: ['goblin', 'dryad', 'centaur'], points: 5 },
+  { id: 27, name: 'Gallop & Stride', requires: ['pegasus', 'pegasus', 'centaur', 'centaur'], points: 5 },
+  { id: 28, name: 'Gate Keepers', requires: ['pegasus', 'harpy', 'pegasus'], points: 6 },
+  { id: 29, name: 'Beasts of Burden', requires: ['dryad', 'pegasus', 'centaur'], points: 4 },
+  { id: 30, name: 'Weight & Wing', requires: ['pegasus', 'dryad', 'pegasus', 'dryad'], points: 5 },
+  { id: 31, name: 'Hoof & Halo', requires: ['centaur', 'fairy', 'pegasus'], points: 5 },
+  { id: 32, name: 'Sky Sovereigns', requires: ['griffin', 'harpy', 'pegasus'], points: 8 },
+  { id: 33, name: 'Fire Faction', requires: ['dragon', 'fairy', 'phoenix'], points: 8 },
+];
+
+export const TITLE_REVEAL_COUNT = {
+  2: 5,
+  3: 7,
+  4: 9,
+  5: 11,
+  6: 13,
+};

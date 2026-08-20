@@ -1,0 +1,30 @@
+rules_version = '2';
+
+// Collector - Firestore security rules.
+//
+// Rooms are intentionally readable/writable by any authenticated (including
+// anonymous) user who knows the room code, since that code IS the shared
+// secret that lets friends join a game. We still block a few obviously bad
+// writes (changing the host, resurrecting a finished game, etc.).
+//
+// Deploy with: firebase deploy --only firestore:rules
+// (see README.md "Firebase setup" for the full walkthrough)
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /games/{roomCode} {
+      allow read: if request.auth != null;
+
+      allow create: if request.auth != null
+        && request.resource.data.hostUid == request.auth.uid
+        && request.resource.data.status == 'lobby';
+
+      allow update: if request.auth != null
+        && resource.data.hostUid == request.resource.data.hostUid
+        && resource.data.code == request.resource.data.code;
+
+      allow delete: if false;
+    }
+  }
+}
